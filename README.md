@@ -8,7 +8,7 @@ Anaconda Prompt を起動し、次のコマンドを実行。
     activate ds2
     conda install jupyter
 
-## ノートブック教材のダウンロード
+## ノートブックのダウンロード
 
 Anaconda Prompt を起動し、次のコマンドを実行。
 
@@ -19,7 +19,11 @@ Anaconda Prompt を起動し、次のコマンドを実行。
     cd ds2
     git pull
 
-## ノートブックの実行 (次回以降)
+もし上記コマンドが、あるファイルのコンフリクトのため失敗したら、次のコマンドを実行してから再度 `git pull` する。
+
+    git checkout -- 該当ファイル名
+
+## ノートブックの実行
 
 Anaconda Prompt を起動し、次のコマンドを実行。
 
