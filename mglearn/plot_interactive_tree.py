@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import plot_tree as plot_tree_  # to avoid name conflict
 
 from sklearn.externals.six import StringIO  # doctest: +SKIP
 from sklearn.tree import export_graphviz
@@ -55,7 +56,7 @@ def plot_tree_progressive():
 
     for i, max_depth in enumerate([1, 2, 9]):
         tree = plot_tree(X, y, max_depth=max_depth, ax=axes[i, 0])
-        axes[i, 1].imshow(tree_image(tree))
+        plot_tree_(tree, impurity=False, ax=axes[i, 1])
         axes[i, 1].set_axis_off()
 
 
