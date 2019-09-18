@@ -7,6 +7,7 @@ Anaconda Prompt を起動し、次のコマンドを実行。
     conda create -n ds2 numpy scipy=1.1.0 scikit-learn matplotlib pandas pillow
     activate ds2
     conda install jupyter
+    conda install seaborn
 
 ## ノートブックのダウンロード
 
