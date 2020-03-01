@@ -1,14 +1,5 @@
 # Python ではじめる機械学習
 
-## 仮想環境の構築 (初回のみ)
-
-Anaconda Prompt を起動し、次のコマンドを実行。
-
-    conda create -n ds2 python=3.6 numpy scipy=1.1.0 scikit-learn matplotlib pandas pillow
-    activate ds2
-    conda install jupyter
-    conda install seaborn
-
 ## ノートブックのダウンロード
 
 Anaconda Prompt を起動し、次のコマンドを実行。
@@ -24,11 +15,18 @@ Anaconda Prompt を起動し、次のコマンドを実行。
 
     git checkout -- 該当ファイル名
 
+## 仮想環境の構築 (初回のみ)
+
+Anaconda Prompt を起動し、次のコマンドを実行。
+
+    cd ds2
+    conda env create -f ds2_windows.yml
+
 ## ノートブックの実行
 
 Anaconda Prompt を起動し、次のコマンドを実行。プロキシサーバーを指定している `set` の2行は、学内LANを使っている場合にのみ必要。
 
-    activate ds2
+    conda activate ds2
     set http_proxy=http://wwwproxy.kanazawa-it.ac.jp:8080
     set https_proxy=http://wwwproxy.kanazawa-it.ac.jp:8080
     cd ds2
