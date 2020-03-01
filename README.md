@@ -26,7 +26,7 @@ Anaconda Prompt を起動し、次のコマンドを実行。
 
 Anaconda Prompt を起動し、次のコマンドを実行。プロキシサーバーを指定している `set` の2行は、学内LANを使っている場合にのみ必要。
 
-    activate ds2
+    conda activate ds2
     set http_proxy=http://wwwproxy.kanazawa-it.ac.jp:8080
     set https_proxy=http://wwwproxy.kanazawa-it.ac.jp:8080
     cd ds2
