@@ -34,9 +34,9 @@ def plot_cross_val_selection():
                                     fillstyle="none", alpha=1, markersize=20,
                                     markeredgewidth=3)
 
-    plt.xticks(range(len(results)), [str(x).strip("{}").replace("'", "") for x
-                                     in grid_search.cv_results_['params']],
-               rotation=90)
+    labels_ = [str(x).strip("{}").replace("'", "") for x
+                                     in grid_search.cv_results_['params']]
+    plt.xticks(range(len(results)), labels_[:len(results)], rotation=90)
     plt.ylabel("Validation accuracy")
     plt.xlabel("Parameter settings")
     plt.legend([marker_cv, marker_mean, marker_best],
