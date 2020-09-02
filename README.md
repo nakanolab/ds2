@@ -13,7 +13,11 @@
 - `git` コマンドが使える場合は Windows のホームディレクトリにてコマンドプロンプトから `git clone https://github.com/nakanolab/ds2.git` を実行。
 - `git` コマンドが使えない場合は、上にある Code と書かれた緑色のボタンから "Download ZIP" を選択して、ダウンロード後に解凍する（フォルダー名は `ds2-master` から `ds2` に変更する）。
 
-## 仮想環境の構築 (初回のみ)
+## Python 実行環境の準備
+
+### Anaconda のインストール
+
+[Anaconda Individual Edition](https://www.anaconda.com/products/individual) を該当する OS のインストーラーをダウンロードして、基本的にすべてデフォルトの設定でインストール。
 
 ### proxy 環境の場合
 
@@ -30,7 +34,7 @@ Anaconda Prompt を立ち上げ、notepad .condarc と打ち、以下をペー�
 
 ### 仮想環境 `ds2` の作成
 
-[Anaconda Individual Edition](https://www.anaconda.com/products/individual) をインストール後、Anaconda Prompt を起動し、次のコマンドを実行。
+Anaconda Prompt を起動し、次のコマンドを実行。
 
     cd ds2
     conda env create -f ds2_windows.yml
