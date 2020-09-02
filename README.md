@@ -1,34 +1,32 @@
 # Python ではじめる機械学習
 
-## ノートブックのダウンロード
+このリポジトリは原著 [Introduction to Machine Learning with Python](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/) に付随した[リポジトリ](https://github.com/amueller/introduction_to_ml_with_python)の 2019年1月11日時点でのバージョンをもとにしている。変更点は以下の通り。
 
-Anaconda Prompt を起動し、次のコマンドを実行。
+- 第1章から第5章までのノートブックの内容を一部取捨選択し、日本語に訳した（セル内の `### [5]` などのようなコメントは本文中の `In[5]:` に対応していることを表す）。
+- 第7章については日本語を対象とした非常に簡単な自然言語処理の例で置き換えた。
+- ノートブックについては、まっさらな状態から実行できるように、実行結果を含めないようにした。
+- Windows環境でスムーズに実行できるように、決定木の可視化で使われていた `graphviz` の代わりに `sklearn.tree` の `plot_tree` を使うようにした。
 
-    git clone https://github.com/nakanolab/ds2.git
+## リポジトリのダウンロード
 
-教材に更新があった場合には、その都度次のコマンドを実行。
-
-    cd ds2
-    git pull
-
-もし上記コマンドが、あるファイルのコンフリクトのため失敗したら、次のコマンドを実行してから再度 `git pull` する。
-
-    git checkout -- 該当ファイル名
+ダウンロード先はどこでもよいが、以下では Windows のホームディレクトリ (`C:\Users\(username)`) の直下に `ds2` という名前のフォルダで保存することを前提としている。
+- `git` コマンドが使える場合は Windows のホームディレクトリにてコマンドプロンプトから `git clone https://github.com/nakanolab/ds2.git` を実行。
+- `git` コマンドが使えない場合は、上にある Code と書かれた緑色のボタンから "Download ZIP" を選択して、ダウンロード後に解凍する。
 
 ## 仮想環境の構築 (初回のみ)
 
-Anaconda Prompt を起動し、次のコマンドを実行。
+[Anaconda Individual Edition](https://www.anaconda.com/products/individual) をインストール後、Anaconda Prompt を起動し、次のコマンドを実行。
 
     cd ds2
     conda env create -f ds2_windows.yml
 
+ただし、proxy 環境の場合は "Wiki" ページにある手順を参照のこと。
+
 ## ノートブックの実行
 
-Anaconda Prompt を起動し、次のコマンドを実行。プロキシサーバーを指定している `set` の2行は、学内LANを使っている場合にのみ必要。
+Anaconda Prompt を起動し、次のコマンドを実行。
 
     conda activate ds2
-    set http_proxy=http://wwwproxy.kanazawa-it.ac.jp:8080
-    set https_proxy=http://wwwproxy.kanazawa-it.ac.jp:8080
     cd ds2
     jupyter notebook
 
