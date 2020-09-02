@@ -15,12 +15,25 @@
 
 ## 仮想環境の構築 (初回のみ)
 
+### proxy 環境の場合
+
+Anaconda Prompt を立ち上げ、notepad .condarc と打ち、以下をペーストして保存。
+
+    ssl_verify: true
+    channels:
+      - defaults
+    proxy_servers:
+      http: http://wwwproxy.kanazawa-it.ac.jp:8080
+      https: http://wwwproxy.kanazawa-it.ac.jp:8080
+
+続いて「仮想環境 `ds2` の作成」を実行。
+
+### 仮想環境 `ds2` の作成
+
 [Anaconda Individual Edition](https://www.anaconda.com/products/individual) をインストール後、Anaconda Prompt を起動し、次のコマンドを実行。
 
     cd ds2
     conda env create -f ds2_windows.yml
-
-ただし、proxy 環境の場合は "Wiki" ページにある手順を参照のこと。
 
 ## ノートブックの実行
 
