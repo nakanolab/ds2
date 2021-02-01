@@ -34,7 +34,7 @@ Anaconda Prompt を立ち上げ、notepad .condarc と打ち、以下をペー�
 
 ### 仮想環境 `ds2` の作成
 
-Anaconda Prompt を起動し、次のコマンドを実行。
+Anaconda Prompt を起動し、次のコマンドを実行（Mac では ds2\_windows.yml に代えて ds2\_mac.yml を指定）。
 
     cd ds2
     conda env create -f ds2_windows.yml
