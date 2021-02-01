@@ -19,7 +19,7 @@
 
 [Anaconda Individual Edition](https://www.anaconda.com/products/individual) を該当する OS のインストーラーをダウンロードして、基本的にすべてデフォルトの設定でインストール。
 
-### proxy 環境の場合
+### 扇が丘キャンパスで作業する場合は proxy の設定
 
 Anaconda Prompt を立ち上げ、notepad .condarc と打ち、以下をペーストして保存。
 
